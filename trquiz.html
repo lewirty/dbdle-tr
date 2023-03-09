@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBDle</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="box1"><div class="centro"><img src="imagens/dead-by-daylight.png" width="300px" href="#" alt="logo"></div>
+    <div class="box2" alt="logotext"><h1>DBDle</h1></div>
+    </div>
+    <div class="caixa">
+        <audio controls src="nursetr1.mp3" style="position:absolute; top:80px"></audio></div>
+    <form onsubmit="checkAnswer(event)">
+        <div class="caixa1">
+        <label for="killers"><div style="text-align: center;">Guess the Killer's 
+           <br> terror radius:</br></div></label>
+        <input list="killers" id="killer" name="killer" autocomplete="off">
+    <datalist id="killers">
+        <option value="Hillbilly"></option>
+        <option value="Nurse"></option>
+        <option value="Shape"></option>
+        <option value="Hag"></option>
+        <option value="Doctor"></option>
+        <option value="Clown"></option>
+        <option value="Spirit"></option>
+        <option value="Legion"></option>
+        <option value="Ghost Face"></option>
+        <option value="Demogorgon"></option>
+        <option value="Oni"></option>
+        <option value="Deathslinger"></option>
+        <option value="Executioner"></option>
+        <option value="Blight"></option>
+        <option value="Twins"></option>
+        <option value="Trickster"></option>
+        <option value="Nemesis"></option>
+        <option value="Cenobite"></option>
+        <option value="Artist"></option>
+        <option value="Onryõ"></option>
+        <option value="Dredge"></option>
+        <option value="Mastermind"></option>
+        <option value="Knight"></option>
+        <option value="Skull Merchant"></option>        
+    </datalist>
+    </input>
+        <div><button type="submit">Submit</div></div>
+    </form>
+    </div>
+
+    <div class="caixa2"><audio controls id="tr2" src="nursetr2.mp3" hidden></audio></div>
+    <div class="caixa3"><audio controls id="tr3" src="nursetr3.mp3" hidden></audio></div>
+    <div class="caixa4"><audio controls id="tr4" src="nursetr4.mp3" hidden></audio></div>
+
+    <script>
+        let wrongAnswers = 0;
+
+        function checkAnswer(event) {
+          event.preventDefault();
+          
+          const input = document.getElementById('killer');
+          const selectedOption = input.value.toLowerCase();
+          
+          if (selectedOption === 'nurse') {
+            alert('Correct!');
+            wrongAnswers = 0;
+          } else {
+            alert('Wrong answer. Try again.');
+            input.value =""
+            wrongAnswers++;
+
+            if (wrongAnswers === 1) {
+                const tr2 = document.getElementById("tr2");
+                tr2.removeAttribute("hidden");
+                tr2.play();
+            }
+            if (wrongAnswers === 2) {
+                const tr3 = document.getElementById ("tr3");
+                tr3.removeAttribute("hidden");
+                tr3.play();
+            }
+            if (wrongAnswers === 3) {
+                const tr4 = document.getElementById ("tr4");
+                tr4.removeAttribute("hidden");
+                tr4.play();
+            }           
+          }
+        }
+        </script>   
+</body>
+</html>

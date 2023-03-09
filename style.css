@@ -1,0 +1,98 @@
+body{
+    background-image: url("imagens/dbd-forest-background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+a{
+    font-family: 'Prompt', sans-serif;
+}
+
+p{
+    color: rgb(0, 0, 0)
+}
+
+h1{
+    color:rgb(0, 0, 0);
+    font-family: 'Prompt', sans-serif;
+    font-size: 75px;
+}
+
+.box1{
+    display: flex;
+justify-content: center;
+}
+.box2{
+    position:absolute;
+    bottom: 520px;
+}
+.botao{
+    display: flex;
+    justify-content: center;
+    position:relative;
+    top: 150px;
+}
+
+
+
+a:link{
+    text-decoration: none;
+    color:rgb(26, 26, 26);
+}
+
+button{
+    background-color: rgb(212, 238, 255);
+}
+
+button:default{
+    background-color: rgb(180, 180, 180);
+}
+
+button:active{
+    background-color: rgb(34, 54, 70);
+}
+
+button:hover{
+    background-color:rgb(95, 145, 153)
+}
+
+.caixa{
+    display: flex;
+justify-content: center;
+position:relative;
+top:150px;
+}
+
+label{
+    background-color: rgb(207, 244, 255);
+}
+.play{
+    display: flex;
+    justify-content: center;
+}
+.caixa1{
+    display: flex;
+    justify-content: center;
+    position:relative;
+    top: 150px;
+}
+.caixa2{
+    display: flex;
+    justify-content: center;
+    position:relative;
+    top: 250px
+}
+.caixa3{
+    display: flex;
+    justify-content: center;
+    position:relative;
+    top: 252px
+}
+.caixa4{
+    display: flex;
+    justify-content: center;
+    position:relative;
+    top: 254px
+}
